@@ -1,0 +1,8 @@
+LOAD DATA INPATH '/DD/2007.csv'
+INTO TABLE airline_delay
+PARTITION(delayYear=2007);
+--하둡의 DD폴더에 있는 2007.csv파일을 로드하고 airline_delay 테이블에 넣는다 파티션 구분은 delayYear=2007로 한다.
+
+select count(*) from airline_delay; //총 건수 읽기
+
+select count(*) from airline_delay where DelayYear=2008; //2008년만 총 건수 읽어오기

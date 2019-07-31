@@ -1,0 +1,22 @@
+고유값 분해를 하는 이유
+데이터가 2차원에서 1차원으로 바꾸려면 데이터가 손실이되는데 
+중요한 데이터(고유값)은 손실되면 안되기 때문에 중요한 데이터를 유지하기 위해 사용
+
+데이터가 손실이 되는 이유는 예를 들어 공이라는 데이터를 한정된 주머니에 넣어야 하는데 한정된 공간이기 때문에
+공이 찌그러져 넣어짐 --> 공이 찌그러지는 것은 데이터가 손실되는것, 공이라는 성질 자체는 고윳값
+
+Feature selection
+Frature extraction : 데이터에서 유의미한 데이터를 추출
+Feature selection이 쓰이는 경우 - 의미있는 feature를 찾는 것(예를 들어 WEKA를 통해 결과값으로 의미있는 데이터 추출)
+Feature extraction이 쓰이는 경우 - 데이터를 1차원으로 뿌렸을 때 하나의 선으로 표현이됨 1차원의 데이터를 가지고 사용
+
+PCA의 목적 - 100차원을 2차원으로 줄일 때 분산(Varience)이 가장 큰 벡터를 찾고자 한다. (레이블을 축소하기 위해 사용됨)
+Singular value decomposition (SVD) - 고윳값 행렬 분해와 같은 행렬 대각화 방법 중 하나
+
+Optimizer 원래 state에서 최적점을 찾아 한칸씩 나아가는 것
+Gradient descent 미분가능한 conven function의 optimum point를 찾는 방법 중 하나
+Stochastic gradient descent(SGD) 데이터 양이 많은 경우 잘게 잘라서 돌리는 것(mini-batch)
+
+
+
+

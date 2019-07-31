@@ -1,0 +1,11 @@
+﻿하둡 명령어 
+hdfs dfs -ls /  //distributed file system 최상위 파일시스템 확인
+Hadoop fs -ls /  //최상위 파일 시스템 확인
+Hdfs dfs -ls /Data  //데이터 폴더 경로 안에 데이터 확인
+hdfs dfs -get /Data/WarPeace.txt /Data  //데이터 폴더(hdfs)에 WarPeace.txt를 로컬(/Data)에 다운받아라(hdfs->로컬)
+hdfs dfs -put /Data/2008.csv /Data  //로컬에있는 2008.cvs(Data/2008.csv)를 데이터(hdfs) 디렉토리에 업로드 (로컬->hdfs)
+hadoop classpath	//classpath는 클래스를 찾기위한 경로
+javac -cp classpath *.java // `는 ~에 있는 것, classpath에 위에 classpath에 있는 주소를 복붙해서 사용 java파일을 import함
+jar cf DD.jar *.class	//개별 파일에서 JAR 파일 만들기
+hadoop jar ./DD.jar DepartureDelayCount /DD/2008.csv /DD/result		
+//hadoop jar 배포_실행대상 jar파일(./DD.jar) jar 파일 내 메인 클래스(DepartureDelayCount) input파일 위치(/DD/2008.csv) output위치(디렉토리) (/DD/result)
